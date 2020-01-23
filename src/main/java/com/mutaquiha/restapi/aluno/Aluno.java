@@ -39,6 +39,4 @@ public class Aluno {
     public void setNomeCompleto(String nomeCompleto) {
         this.nomeCompleto = nomeCompleto;
     }
-
-
 }

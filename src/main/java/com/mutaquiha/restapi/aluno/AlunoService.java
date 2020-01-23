@@ -19,4 +19,16 @@ public class AlunoService {
     public List<Aluno> getAlunos() {
         return alunos;
     }
+
+    public Aluno getAluno(int id) {
+
+        for (Aluno aluno : alunos){
+
+            if (aluno.getId() == id){
+               return aluno;
+            }
+        }
+
+        return null;
+    }
 }
