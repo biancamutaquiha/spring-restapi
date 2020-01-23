@@ -12,7 +12,7 @@ public class Aluno {
         this.nomeCompleto = nomeCompleto;
     }
 
-    public Aluno(){
+    public Aluno() {
 
     }
 

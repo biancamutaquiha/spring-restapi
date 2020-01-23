@@ -9,13 +9,14 @@ import java.util.List;
 public class AlunoService {
 
     private static List<Aluno> alunos = new ArrayList<>();
-    static{
+
+    static {
         alunos.add(new Aluno(1, 10, "Olivio de Freitas"));
         alunos.add(new Aluno(2, 13, "Bianca Ferreira"));
         alunos.add(new Aluno(3, 11, "João Carvalho"));
     }
 
-    public List<Aluno> getAlunos(){
+    public List<Aluno> getAlunos() {
         return alunos;
     }
 }
