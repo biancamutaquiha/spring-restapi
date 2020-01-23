@@ -29,6 +29,19 @@ public class AlunoService {
             }
         }
 
-        return null;
+        return new Aluno();
     }
+
+    public DefaultResponse deleteAluno(int id) {
+
+        for (Aluno aluno : alunos){
+
+            if (aluno.getId() == id){
+                alunos.remove(aluno);
+                return new DefaultResponse(200, "sucesso", "Aluno deletado com sucesso.");
+            }
+        }
+        return new DefaultResponse(404, "erro", "Aluno não encontrado.");
+    }
+
 }
