@@ -22,10 +22,10 @@ public class AlunoService {
 
     public Aluno getAluno(int id) {
 
-        for (Aluno aluno : alunos){
+        for (Aluno aluno : alunos) {
 
-            if (aluno.getId() == id){
-               return aluno;
+            if (aluno.getId() == id) {
+                return aluno;
             }
         }
 
@@ -34,9 +34,9 @@ public class AlunoService {
 
     public DefaultResponse deleteAluno(int id) {
 
-        for (Aluno aluno : alunos){
+        for (Aluno aluno : alunos) {
 
-            if (aluno.getId() == id){
+            if (aluno.getId() == id) {
                 alunos.remove(aluno);
                 return new DefaultResponse(200, "sucesso", "Aluno deletado com sucesso.");
             }
@@ -48,5 +48,17 @@ public class AlunoService {
         alunos.add(aluno);
 
         return new DefaultResponse(201, "sucesso", "Aluno adicionado com sucesso.");
+    }
+
+    public DefaultResponse editAluno(int id, Aluno aluno) {
+
+        for (int i = 0; i < alunos.size(); i++) {
+            if (alunos.get(i).getId() == id) {
+                alunos.set(i, aluno);
+
+                return new DefaultResponse(202, "sucesso", "Aluno editado com sucesso.");
+            }
+        }
+        return new DefaultResponse(404, "erro", "Aluno não econtrado.");
     }
 }

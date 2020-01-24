@@ -26,9 +26,10 @@ public class AlunoController {
         return alunoService.deleteAluno(id);
     }
 
-//    public Aluno editAluno(){
-//        return alunoService.
-//    }
+    @RequestMapping(method = RequestMethod.PUT, value = "/aluno/{id}")
+    public DefaultResponse editAluno(@PathVariable int id, @RequestBody Aluno aluno){
+        return alunoService.editAluno(id, aluno);
+    }
 
     @RequestMapping(method = RequestMethod.POST, value = "/alunos")
     public DefaultResponse addAluno(@RequestBody Aluno aluno){
