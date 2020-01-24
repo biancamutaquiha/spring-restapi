@@ -44,4 +44,9 @@ public class AlunoService {
         return new DefaultResponse(404, "erro", "Aluno não encontrado.");
     }
 
+    public DefaultResponse addAluno(Aluno aluno) {
+        alunos.add(aluno);
+
+        return new DefaultResponse(201, "sucesso", "Aluno adicionado com sucesso.");
+    }
 }
